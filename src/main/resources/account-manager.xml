@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="accountDao" class="product.star.account.manager.InMemoryAccountDao"/>
+    <bean name="phoneToAccountResolver" class="product.star.account.manager.InMemoryPhoneToAccountResolver"/>
+    <bean name="accountService" class="product.star.account.manager.InMemoryAccountService">
+        <constructor-arg name="phoneToAccountResolver" ref="phoneToAccountResolver"/>
+        <constructor-arg name="accountDao" ref="accountDao"/>
+    </bean>
+</beans>
