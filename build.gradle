@@ -13,6 +13,10 @@ dependencies {
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
     implementation 'org.springframework.boot:spring-boot-starter-web:3.3.2'
+    implementation 'org.springframework:spring-jdbc:6.1.11'
+    implementation 'org.springframework:spring-context:6.1.11'
+    implementation 'commons-dbcp:commons-dbcp:1.4'
+    implementation 'org.postgresql:postgresql:42.7.3'
 }
 
 tasks.withType(JavaCompile) {

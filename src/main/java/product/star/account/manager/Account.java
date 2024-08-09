@@ -1,6 +1,7 @@
 package product.star.account.manager;
 
 public class Account {
+
     private final long id;
     private long amount;
 
