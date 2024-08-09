@@ -1,14 +1,12 @@
 package product.star.account.manager;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import product.star.account.manager.config.AccountManagerConfig;
 
-@SpringBootApplication
 public class AccountManagerMain {
     public static void main(String[] args) {
 
-        var applicationContext = new AnnotationConfigApplicationContext(AccountManagerMain.class);
+        var applicationContext = new AnnotationConfigApplicationContext(AccountManagerConfig.class);
 
         var accountDao = applicationContext.getBean(AccountDao.class);
 
